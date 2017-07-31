@@ -14,18 +14,22 @@ class ImageMaker {
         // When this class is instantiated, the `constructor()` method is executed.
         // Select the `#image-preview` div.
         this.imagePreview = document.getElementById('image-preview');
-        // Create a new `<p>` element called `this.topText`
-        this.topText = document.createElement('p');
-        // Add a `class` attribute to `this.topText` that contains the classname "top-text".
-        this.topText.setAttribute('class', 'top-text');
-        // Append `this.topText` as a child element to `this.imagePreview`
-        this.imagePreview.appendChild(this.topText);
-        // Create a new `<p>` element called `this.bottomText`
-        this.bottomText = document.createElement('p');
-        // Add a `class` attribute to `this.bottomText` that contains the classname "bottom-text".
-        this.bottomText.setAttribute('class', 'bottom-text');
-        // Append `this.bottomText` as a child element to `this.imagePreview`
-        this.imagePreview.appendChild(this.bottomText);
+        
+        // topText
+        this.topText = document.createElement('p'); // New `<p>` element called `this.topText`
+        this.topText.setAttribute('class', 'top-text'); // Add `class`, classname "top-text".
+        this.imagePreview.appendChild(this.topText); // Append `this.topText` as child element to `this.imagePreview`
+        
+        // bottomText
+        this.bottomText = document.createElement('p'); // New `<p>` element called `this.bottomText`
+        this.bottomText.setAttribute('class', 'bottom-text'); // Add `class`, classname "bottom-text".
+        this.imagePreview.appendChild(this.bottomText); // Append `this.bottomText` as child element to `this.imagePreview`
+        
+        // fontColor
+        this.fontColor = document.createElement('p');
+        this.fontColor.setAttribute('class', 'font-color');
+        this.imagePreview.appendChild(this.fontColor); 
+        
         
         // This class also uses the form fields to read user input. 
         // Select the `input` element with the `name` attribute "backgroundImage"
@@ -34,6 +38,7 @@ class ImageMaker {
         this.topTextInput = document.querySelector('input[name="topText"]');
         // Select the `input` element with the `name` attribute "bottomText"
         this.bottomTextInput = document.querySelector('input[name="bottomText"]');
+        this.fontColorInput = document.querySelector('input[name="fontColor"]');
     }
     
   drawPreview(){
@@ -49,6 +54,7 @@ class ImageMaker {
         this.topText.innerHTML = this.topTextInput.value;
         // Update the `innerHTML` of `this.bottomText`
         this.bottomText.innerHTML = this.bottomTextInput.value;
+        this.fontColor.innerHTML = this.fontColorInput.value;
 
     }
     downloadImage(){
