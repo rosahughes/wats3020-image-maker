@@ -25,7 +25,7 @@ class ImageMaker {
         this.bottomText.setAttribute('class', 'bottom-text'); // Add `class`, classname "bottom-text".
         this.imagePreview.appendChild(this.bottomText); // Append `this.bottomText` as child element to `this.imagePreview`
         
-        // fontColor
+        // textColor
         this.textColor = document.createElement('p');
         this.textColor.setAttribute('class', 'text-color');
         this.imagePreview.appendChild(this.textColor); 
@@ -38,6 +38,7 @@ class ImageMaker {
         this.topTextInput = document.querySelector('input[name="topText"]');
         // Select the `input` element with the `name` attribute "bottomText"
         this.bottomTextInput = document.querySelector('input[name="bottomText"]');
+        // Select the `input` element with the attribute "textColor"
         this.textColorInput = document.querySelector('input[name="textColor"]');
     }
     
@@ -54,7 +55,10 @@ class ImageMaker {
         this.topText.innerHTML = this.topTextInput.value;
         // Update the `innerHTML` of `this.bottomText`
         this.bottomText.innerHTML = this.bottomTextInput.value;
-        this.textColor.innerHTML = this.textColorInput.value;
+        // Update the `topText` color
+        this.topText.style.color = this.textColorInput.value;
+        // Update the 'bottomText` color
+        this.bottomText.style.color = this.textColorInput.value;
 
     }
     downloadImage(){
