@@ -25,11 +25,6 @@ class ImageMaker {
         this.bottomText.setAttribute('class', 'bottom-text'); // Add `class`, classname "bottom-text".
         this.imagePreview.appendChild(this.bottomText); // Append `this.bottomText` as child element to `this.imagePreview`
         
-        // textColor
-        this.textColor = document.createElement('p');
-        this.textColor.setAttribute('class', 'text-color');
-        this.imagePreview.appendChild(this.textColor); 
-        
         
         // This class also uses the form fields to read user input. 
         // Select the `input` element with the `name` attribute "backgroundImage"
@@ -39,7 +34,9 @@ class ImageMaker {
         // Select the `input` element with the `name` attribute "bottomText"
         this.bottomTextInput = document.querySelector('input[name="bottomText"]');
         // Select the `input` element with the attribute "textColor"
-        this.textColorInput = document.querySelector('input[name="textColor"]');
+        this.topText.textColorInput = document.querySelector('input[name="topTextColor"]');
+        // `bottomText` color
+        this.bottomText.textColorInput = document.querySelector('input[name="bottomTextColor]');
     }
     
   drawPreview(){
