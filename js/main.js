@@ -53,9 +53,9 @@ class ImageMaker {
         // Update the `innerHTML` of `this.bottomText`
         this.bottomText.innerHTML = this.bottomTextInput.value;
         // Update the `topText` color
-        this.topText.style.color = this.textColorInput.value;
+        this.topText.style.color = this.topText.textColorInput.value;
         // Update the 'bottomText` color
-        this.bottomText.style.color = this.textColorInput.value;
+        this.bottomText.style.color = this.bottomText.textColorInput.value;
 
     }
     downloadImage(){
