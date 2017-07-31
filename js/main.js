@@ -26,9 +26,9 @@ class ImageMaker {
         this.imagePreview.appendChild(this.bottomText); // Append `this.bottomText` as child element to `this.imagePreview`
         
         // fontColor
-        this.fontColor = document.createElement('p');
-        this.fontColor.setAttribute('class', 'font-color');
-        this.imagePreview.appendChild(this.fontColor); 
+        this.textColor = document.createElement('p');
+        this.textColor.setAttribute('class', 'text-color');
+        this.imagePreview.appendChild(this.textColor); 
         
         
         // This class also uses the form fields to read user input. 
@@ -38,7 +38,7 @@ class ImageMaker {
         this.topTextInput = document.querySelector('input[name="topText"]');
         // Select the `input` element with the `name` attribute "bottomText"
         this.bottomTextInput = document.querySelector('input[name="bottomText"]');
-        this.fontColorInput = document.querySelector('input[name="fontColor"]');
+        this.textColorInput = document.querySelector('input[name="textColor"]');
     }
     
   drawPreview(){
@@ -54,7 +54,7 @@ class ImageMaker {
         this.topText.innerHTML = this.topTextInput.value;
         // Update the `innerHTML` of `this.bottomText`
         this.bottomText.innerHTML = this.bottomTextInput.value;
-        this.fontColor.innerHTML = this.fontColorInput.value;
+        this.textColor.innerHTML = this.textColorInput.value;
 
     }
     downloadImage(){
