@@ -36,7 +36,7 @@ class ImageMaker {
         // Select the `input` element with the attribute "textColor"
         this.topText.textColorInput = document.querySelector('input[name="topTextColor"]');
         // `bottomText` color
-        this.bottomText.textColorInput = document.querySelector('input[name="bottomTextColor]');
+        this.bottomText.textColorInput = document.querySelector('input[name="bottomTextColor"]');
     }
     
   drawPreview(){
